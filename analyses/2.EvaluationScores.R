@@ -1,3 +1,9 @@
+# analyses/1.SDM_loop.R
+
+
+# Setup -------------------------------------------------------------------
+
+# Libraries
 library(biomod2)
 library(ggplot2)
 library(ggtext)
@@ -10,11 +16,12 @@ library(sf)
 library(sp)
 library(tidyverse)
 
-
+# Custom functions
+## To save the scripts later
 loadRData <- function(fileName){
   load(fileName)
   get(ls()[ls() != "fileName"])
-} ## To save the scripts later
+} 
 
 
 # Load data (individual species) ---------------------------------------------------------------
@@ -890,7 +897,4 @@ ggsave("talk/figure/fig_S4_saccharina.png", model_stats_Slat, width = 7, height 
 #   data_species = get_formal_data(biomod_model, 'resp.var')
 # )
 # 
-
-
-
 
